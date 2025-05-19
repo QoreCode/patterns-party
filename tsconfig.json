@@ -1,0 +1,20 @@
+{
+  "compileOnSave": false,
+  "compilerOptions": {
+    "moduleResolution": "Node",
+    "target": "ES5",
+    "module": "commonjs",
+    "noEmit": true,
+    "removeComments": true,
+    "resolveJsonModule": true,
+    "sourceMap": true,
+    "lib": [ "es2015" ],
+    "typeRoots": [
+      "./node_modules/@types",
+      "../../Users/Дмитрий/Downloads/typescript-playground-master/src/typings"
+    ]
+  },
+  "include": [
+    "src/**/*"
+  ]
+}
