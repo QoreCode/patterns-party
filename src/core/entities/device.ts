@@ -1,11 +1,11 @@
 import { DeviceStatus } from '../types/device-status';
 
-export class Device {
+export abstract class Device {
   id: string;
   name: string;
   status: DeviceStatus;
 
-  constructor(id: string, name: string, status: DeviceStatus = DeviceStatus.OFFLINE) {
+  protected constructor(id: string, name: string, status: DeviceStatus = DeviceStatus.OFFLINE) {
     this.id = id;
     this.name = name;
     this.status = status;

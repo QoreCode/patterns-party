@@ -1,1 +1,6 @@
-Create a factories that will create all devices
+Create a factory methods for house and apartment models
+
+it should work like this:
+
+house.createLamp()
+house.createClock()

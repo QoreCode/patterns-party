@@ -1,1 +1,1 @@
-Create a prototype of Hub filled  with items
+Create a prototype of House filled  with items
