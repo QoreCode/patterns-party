@@ -1,30 +1,31 @@
-# [Facade Design Pattern](https://refactoring.guru/design-patterns/facade)
+# [Flyweight Design Pattern](https://refactoring.guru/design-patterns/flyweight)
 
 ## Short Description
 
-The Facade is a structural design pattern that provides a simplified interface to a complex subsystem, making it easier to use and understand. It hides the complexities of the subsystem and provides a higher-level interface that makes the subsystem easier to use.
+The Flyweight is a structural design pattern that allows programs to support a large number of fine-grained objects efficiently by sharing common parts of their state. It reduces memory usage by separating intrinsic (shared) and extrinsic (unique) state and reusing objects with shared data.
 
 ## Diagram
 
-![Facade Structure](https://refactoring.guru/images/patterns/diagrams/facade/structure.png)
+![Flyweight Structure](https://refactoring.guru/images/patterns/diagrams/flyweight/structure.png)
 
 ## Pros and Cons
 
 | Pros                                                                 | Cons                                                                 |
 |----------------------------------------------------------------------|----------------------------------------------------------------------|
-| Simplifies the interface to a complex subsystem                      | Can become a god object if it knows too much about the subsystem     |
-| Reduces dependencies on external code                                | May limit flexibility by hiding subsystem details                   |
-| Makes the subsystem easier to use and understand                     | Can introduce a single point of failure                            |
+| Reduces memory consumption by sharing common data                    | Complexity increases due to the need to manage shared and unique state |
+| Improves performance when working with many similar objects          | Might introduce unnecessary complexity if used prematurely           |
+| Supports a large number of objects efficiently                       | Makes code less readable and harder to debug                        |
 
 ## When to Use
 
-Use the Facade pattern when:
+Use the Flyweight pattern when:
 
-- You need to provide a simple interface to a complex subsystem.
-- You want to reduce dependencies on external code.
-- You want to make a subsystem easier to use and understand.
+- You need to create a large number of similar objects.
+- Memory usage is a concern, and many objects can share common data.
+- The object's state can be split into intrinsic (shared) and extrinsic (unique) parts.
 
-Avoid using the Facade pattern when:
+Avoid using the Flyweight pattern when:
 
-- You need to expose the full functionality of a subsystem.
-- You want to allow clients to interact directly with subsystem components.
+- Objects are too different and can't share state effectively.
+- The added complexity doesn't justify the memory savings.
+- You need full control over the object’s state in one place.
