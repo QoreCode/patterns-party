@@ -11,7 +11,7 @@ export class User {
     id: string,
     name: string,
     email: string,
-    role: UserRole = UserRole.USER,
+    role: UserRole = UserRole.GUEST,
     createdAt: Date = new Date()
   ) {
     this.id = id;
@@ -22,7 +22,7 @@ export class User {
   }
 
   isAdmin(): boolean {
-    return this.role === UserRole.ADMIN;
+    return this.role === UserRole.OWNER;
   }
 
   updateEmail(newEmail: string) {
