@@ -1,3 +1,1 @@
-Create an history of AC changes with possibility to roll it back
-
-Create snapshots for `factoryState` and `pointOfRestoration`
+Create snapshots for AC like `factoryState` and `pointOfRestoration`, `defaultPreset`, `userPreset1` and logic to switch between them
