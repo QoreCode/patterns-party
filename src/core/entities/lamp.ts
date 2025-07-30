@@ -24,4 +24,16 @@ export class Lamp extends Device {
   setColor(color: LampColor) {
     this.color = color;
   }
+
+  enable(hour: number): void {
+    if (hour < 7) {
+      this.brightness = 10
+    } else if (hour < 18) {
+      this.brightness = 0
+    } else if (hour < 24) {
+      this.brightness = 100
+    }
+
+    this.isOn = true
+  }
 }
